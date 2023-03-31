@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Movies Bruv
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,11 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="small">Movies Bruv</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
  <h3>Welcome to Mobile Apps Starter project 2023</h3>
+ <br>
+ <ion-list>
+    <ion-item *ngFor="let x of myMovies">
+        <ion-thumbnail size="">
+          <img src="{{x.Poster}}"/>
+        </ion-thumbnail>
+        <ion-title> {{x.Title}}</ion-title>
+        <ion-label>Year: {{x.Year}}</ion-label>
+        <ion-label>Type: {{x.Type}}</ion-label>
+    </ion-item>
+  
+  </ion-list>
   </div>
 </ion-content>
